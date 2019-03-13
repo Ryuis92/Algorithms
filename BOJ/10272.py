@@ -31,8 +31,8 @@ def travel(ship1, ship2):
 
 	next_planet = max(ship1, ship2) + 1
 
-	ship1_move = travel(ship1, next_planet) + dist(x[ship2], y[ship2], x[next_planet], y[next_planet])
-	ship2_move = travel(next_planet, ship2) + dist(x[ship1], y[ship1], x[next_planet], y[next_planet])
+	ship1_move = travel(next_planet, ship2) + dist(x[ship1], y[ship1], x[next_planet], y[next_planet])
+	ship2_move = travel(ship1, next_planet) + dist(x[ship2], y[ship2], x[next_planet], y[next_planet])
 
 	ans = min(ship1_move, ship2_move)
 
