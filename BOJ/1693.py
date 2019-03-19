@@ -1,5 +1,5 @@
 # https://www.acmicpc.net/problem/1693
-
+# ref : https://blog.encrypted.gg/144
 import sys
 import math
 input = sys.stdin.readline
@@ -16,7 +16,6 @@ for i in range(n-1):
 	adj[b].append(a)
 
 def coloring(root, parent):
-	
 	#add color cost i
 	for i in range(1, color_num+1):
 		dp[root][i] += i
